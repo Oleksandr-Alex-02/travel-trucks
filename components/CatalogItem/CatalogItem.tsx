@@ -1,3 +1,5 @@
+
+import Link from "next/link";
 import { Camper } from "@/lib/api";
 
 type Props = {
@@ -5,12 +7,10 @@ type Props = {
 }
 
 const CatalogItem = ({ item }: Props) => {
-    console.log("CatalogItem отримав:", item);
-
 
     return (
         <li>
-            <p>{item.name}</p>
+            <Link href={`/catalog/${item.id}`}>{item.name}</Link>
         </li>
     )
 }

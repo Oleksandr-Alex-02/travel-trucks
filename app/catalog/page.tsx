@@ -8,8 +8,7 @@ const Catalog = async () => {
   return (
     <section>
       <div>Catalog</div>
-      <CatalogList campers={resCamers.items} /> {/* масив */}
-      <p>Всього кемперів: {resCamers.total}</p>
+      <CatalogList campers={resCamers.items} />
     </section>
   );
 };
