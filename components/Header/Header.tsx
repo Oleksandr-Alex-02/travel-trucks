@@ -7,10 +7,10 @@ const Header = () => {
     return (
         <section>
             <header className={css.header}>
-                <h2><Link href='/'>
+                <Link href='/'>
                     <svg width="136" height="20">
                         <use href="/sprite.svg#logo" />
-                    </svg></Link></h2>
+                    </svg></Link>
 
                 <nav>
                     <ul className={css.navigation}>

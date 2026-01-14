@@ -2,15 +2,36 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 24px;
-    padding: 12px;
-    border-block-end: 1px solid #ccc;
+    flex-direction: row;
+    gap: 450px;
+
+    border-bottom: 1px solid var(--badges);
+    background: var(--inputs);
+
+    padding: 24px 64px;
+    width: 1440px;
+    height: 72px;
 }
 
 .navigation {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 12px;
-    list-style-type: none;
+    flex-direction: row;
+    gap: 32px;
+
+    width: 138px;
+}
+
+.navigation li {
+    font-weight: 500;
+    font-size: 16px;
+
+    line-height: 1.5;
+    text-align: center;
+    color: var(--main);
+}
+
+.navigation li:hover {
+    color: var(--button-hover);
 }
