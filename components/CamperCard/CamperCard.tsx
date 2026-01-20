@@ -1,6 +1,7 @@
 
 import { Camper } from '@/lib/api';
 import Equipment from '../Equipment/Equipment';
+import CampersForm from '@/components/Form/Form';
 
 type Props = {
     camper: Camper;
@@ -32,7 +33,6 @@ const CamperCard = ({ camper }: Props) => {
                 {camper.description}
             </p>
 
-            {/* <h3>Equipment</h3> */}
             <div>
                 <Equipment camper={camper} />
                 <div>
@@ -47,6 +47,7 @@ const CamperCard = ({ camper }: Props) => {
                     </ul>
                 </div>
             </div>
+            <CampersForm />
         </section>
     )
 };
