@@ -1,6 +1,7 @@
+'use client';
 
 import React from "react";
-
+import { useId } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -12,6 +13,7 @@ const validation = Yup.object({
 });
 
 const CampersForm = () => {
+    const fildId = useId();
 
     return (
         <Formik
@@ -24,33 +26,33 @@ const CampersForm = () => {
             {() => (
                 <Form>
                     <div>
-                        <label htmlFor="name">Name</label>
-                        <Field id='name' name='name' type='text' />
+                        <label htmlFor={`${fildId}-name`}></label>
+                        <Field id={`${fildId}-name`} name='name' type='text' placeholder='Name*' />
                         <ErrorMessage name='name' component="span" />
                     </div>
 
                     <div>
-                        <label htmlFor="email">Email</label>
-                        <Field id='email' name='email' type='email' />
+                        <label htmlFor={`${fildId}-email`}></label>
+                        <Field id={`${fildId}-email`} name='email' type='email' placeholder='Email*' />
                         <ErrorMessage name='email' component="span" />
                     </div>
 
                     <div>
-                        <label htmlFor="date">Data</label>
-                        <Field id='date' name='date' type='date' />
+                        <label htmlFor={`${fildId}-date`}></label>
+                        <Field id={`${fildId}-date`} name='date' type='date' placeholder='Booking date*' />
                         <ErrorMessage name='date' component="span" />
-                    </div>
+                    </div >
 
                     <div>
-                        <label htmlFor="comment">Comment</label>
-                        <Field id='comment' name='comment' as="textarea" />
+                        <label htmlFor={`${fildId}-comment`}></label>
+                        <Field id={`${fildId}-comment`} name='comment' as="textarea" placeholder='Comment' />
                         <ErrorMessage name='comment' component="span" />
-                    </div>
+                    </div >
 
                     <button type="submit">Відправити</button>
-                </Form>
+                </Form >
             )}
-        </Formik>
+        </Formik >
     )
 };
 
