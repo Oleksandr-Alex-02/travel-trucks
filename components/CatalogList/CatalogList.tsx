@@ -1,5 +1,6 @@
 import { Camper } from "@/lib/api";
 import CatalogItem from "../CatalogItem/CatalogItem";
+import css from '@/components/CatalogItem/CatalogItem.module.css'
 
 type Props = {
     campers: Camper[]
@@ -16,7 +17,7 @@ const CatalogList = ({ campers }: Props) => {
     }
 
     return (
-        <ul>
+        <ul className={css.list}>
             {campers.map((camper) => (
                 <CatalogItem key={camper.id} item={camper} />
             ))}

@@ -1,6 +1,9 @@
 
 import axios from "axios";
 
+type GalleryItem = { thumb: string; original: string };
+type Review = { reviewer_name: string; reviewer_rating: number; comment: string };
+
 export type Camper = {
   id: string;
   name: string;
@@ -26,8 +29,11 @@ export type Camper = {
   gas: boolean;
   water: boolean;
 
-  gallery: { thumb: string; original: string }[];
-  reviews: { reviewer_name: string; reviewer_rating: number; comment: string }[];
+  gallery: GalleryItem[];
+  reviews: Review[];
+
+  // gallery: { thumb: string; original: string }[];
+  // reviews: { reviewer_name: string; reviewer_rating: number; comment: string }[];
 };
 
 export type CamperResponse = {

@@ -7,7 +7,6 @@ const Catalog = async () => {
 
   return (
     <section>
-      <div>Catalog</div>
       <CatalogList campers={resCamers.items} />
     </section>
   );
